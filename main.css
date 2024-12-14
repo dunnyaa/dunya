@@ -1,0 +1,216 @@
+@keyframes img-animation {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 30px;
+  }
+}
+main .healthy-meal {
+  background-color: rgb(242, 242, 242);
+  padding: 5rem 15%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .healthy-meal .healthy-meal-content h1 {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color: rgb(78, 78, 89);
+}
+main .healthy-meal .healthy-meal-content p {
+  font-size: 20px;
+  margin: 40px 0;
+}
+main .healthy-meal .healthy-meal-content .btn-healthy-meal1 {
+  padding: 8px 20px;
+  background-color: rgb(206, 18, 19);
+  color: white;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+main .healthy-meal .healthy-meal-content .btn-healthy-meal1:hover {
+  background-color: rgba(206, 18, 18, 0.889);
+}
+main .healthy-meal .healthy-meal-content .btn-healthy-meal2 {
+  color: black;
+  padding: 8px 20px;
+  transition: 0.2s;
+}
+main .healthy-meal .healthy-meal-content .btn-healthy-meal2 i {
+  color: rgb(206, 18, 19);
+}
+main .healthy-meal .healthy-meal-content .btn-healthy-meal2:hover {
+  color: rgb(206, 18, 19);
+}
+main .healthy-meal .healthy-meal-img {
+  width: 40%;
+  height: 100%;
+  animation-name: img-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+main .healthy-meal .healthy-meal-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .about {
+  padding: 40px 15%;
+}
+main .about h5 {
+  color: rgb(78, 78, 89);
+  text-align: center;
+}
+main .about .heading-part-about {
+  color: rgb(78, 78, 89);
+  text-align: center;
+}
+main .about .heading-part-about span {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: rgb(206, 18, 19);
+}
+main .about .grid {
+  grid-gap: 15px 60px;
+  display: grid;
+  justify-content: center;
+  grid-template-areas: "grid-img grid-img grid-img grid-about grid-about" "grid-img grid-img grid-img grid-about grid-about" "grid-img grid-img grid-img grid-video grid-video" "grid-span grid-span grid-span grid video grid video";
+}
+main .about .grid .grid-img {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  overflow: hidden;
+  background-color: black;
+}
+main .about .grid .grid-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.4;
+  transition: 0.4s;
+}
+main .about .grid .grid-img:hover img {
+  opacity: 0.7;
+  transform: scale(1.2);
+}
+main .about .grid .grid-span {
+  grid-column: 1/3;
+  grid-row: 3/8;
+  border: 3px solid rgb(78, 78, 89);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .about .grid .grid-span .content {
+  font-weight: 700;
+}
+main .about .grid .grid-span .red-span {
+  color: rgb(206, 18, 19);
+}
+main .about .grid .grid-about {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+main .about .grid .grid-about p {
+  font-style: italic;
+  color: rgb(78, 78, 89);
+  font-size: 13px;
+  line-height: 17px;
+}
+main .about .grid .grid-about ul li {
+  padding: 7px;
+  line-height: 17px;
+  font-size: 10px;
+}
+main .about .grid .grid-about ul li i {
+  padding: 2px 3px;
+  background-color: rgb(206, 18, 19);
+  border-radius: 50%;
+  color: white;
+}
+main .about .grid .grid-video {
+  background-color: black;
+  position: relative;
+  grid-column: 3/4;
+  grid-row: 2/8;
+  overflow: hidden;
+}
+main .about .grid .grid-video img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.4;
+  transition: 0.4s;
+}
+main .about .grid .grid-video a {
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  color: white;
+  padding: 15px 20px;
+  background-color: rgb(206, 18, 19);
+}
+main .about .grid .grid-video a:hover i {
+  transform: scale(1.5);
+}
+main .about .grid .grid-video i {
+  transition: 0.2s;
+}
+main .about .grid .grid-video:hover img {
+  opacity: 0.7;
+  transform: scale(1.2);
+}
+
+@media (max-width: 991px) {
+  .healthy-meal {
+    min-height: 170vh;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  .healthy-meal .healthy-meal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 0;
+  }
+  .healthy-meal .healthy-meal-content .btn-healthy-meal2 {
+    padding: 8px 0;
+  }
+  .healthy-meal .healthy-meal-img {
+    order: 1;
+    min-width: 90%;
+    height: 100%;
+  }
+  @keyframes img-animation {
+    from {
+      margin-top: 0px;
+    }
+    to {
+      margin-top: 0px;
+    }
+  }
+  .healthy-meal .healthy-meal-img img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .healthy-meal .healthy-meal-content {
+    order: 2;
+  }
+}/*# sourceMappingURL=main.css.map */
